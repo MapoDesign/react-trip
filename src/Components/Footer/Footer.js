@@ -49,10 +49,14 @@ function Footer() {
                 <h4>Coding</h4>
                 <ul className="list-unstyled li-space-lg">
                   <li>
-                    <a className="white">React</a>
+                    <a className="white" href="#">
+                      React
+                    </a>
                   </li>
                   <li>
-                    <a className="white">Vanilla JavaScript</a>
+                    <a className="white" href="#">
+                      Vanilla JavaScript
+                    </a>
                   </li>
                 </ul>
               </div>
