@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import SingleHoliday from "./SingleHoliday";
-const url = "https://react--course-api.herokuapp.com/api/v1/data/vacanze";
+const url = "https://run.mocky.io/v3/5e37d349-3489-4a79-a69e-3b79a9a08a10";
 
 const Holiday = () => {
   const [data, setData] = useState([]);

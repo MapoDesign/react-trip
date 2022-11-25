@@ -48,16 +48,8 @@ function Footer() {
               <div className="text-container">
                 <h4>Coding</h4>
                 <ul className="list-unstyled li-space-lg">
-                  <li>
-                    <a className="white" href="#">
-                      React
-                    </a>
-                  </li>
-                  <li>
-                    <a className="white" href="#">
-                      Vanilla JavaScript
-                    </a>
-                  </li>
+                  <li className="white">React</li>
+                  <li className="white">Vanilla JavaScript</li>
                 </ul>
               </div>
             </div>
