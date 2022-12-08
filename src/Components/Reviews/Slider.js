@@ -4,7 +4,7 @@ import data from "../api/data";
 import Review from "./Review";
 
 const Slider = () => {
-  const [recensioni, _] = useState(data);
+  const [recensioni] = useState(data);
   const [active, setActive] = useState(0);
 
   // Passa alla prossima recensone
