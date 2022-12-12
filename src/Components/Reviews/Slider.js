@@ -31,35 +31,63 @@ const Slider = () => {
 
   return (
     <>
-      <div className="slidercontainer sliderreviews">
-        {recensioni.map((recensione, index) => {
-          //Cambio classe in base alla posizione rispetto all'elemento attivo
-          let positionClass = "";
-          if (index === active) {
-            positionClass = "activeReview";
-          } else if (
-            active === index + 1 ||
-            (active === 0 && index === recensioni.length - 1)
-          ) {
-            positionClass = "prevReview";
-          } else {
-            positionClass = "nextReview";
-          }
-          return (
-            <Review
-              key={recensione.id}
-              {...recensione}
-              classes={positionClass}
-            />
-          );
-        })}
-        <div className="btn-group slider-btn-group">
-          <button className="btn btn-slider prev-slide" onClick={prevReview}>
-            prev
-          </button>
-          <button className="btn btn-slider next-slide" onClick={nextReview}>
-            next
-          </button>
+      <div className="slider">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <h2>Read Our Customer Testimonials</h2>
+              <p className="p-heading">
+                Our clients are our partners and we can not imagine a better
+                future for our company without helping them reach their
+                objectives
+              </p>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-12">
+              {/*   Card Slider */}
+              <div className="slider-container">
+                <div className="swiper-container card-slider">
+                  <div className="swiper-wrapper">
+                    {/*   Slide */}
+                    <div className="slidercontainer sliderreviews swiper-slide">
+                      {recensioni.map((recensione, index) => {
+                        //Cambio classe in base alla posizione rispetto all'elemento attivo
+                        let positionClass = "";
+                        if (index === active) {
+                          positionClass = "activeReview";
+                        } else if (
+                          active === index + 1 ||
+                          (active === 0 && index === recensioni.length - 1)
+                        ) {
+                          positionClass = "prevReview";
+                        } else {
+                          positionClass = "nextReview";
+                        }
+                        return (
+                          <Review
+                            key={recensione.id}
+                            {...recensione}
+                            classes={positionClass}
+                          />
+                        );
+                      })}
+                      {/*  Add Arrows */}
+                      <div
+                        className="swiper-button-next"
+                        onClick={nextReview}
+                      ></div>
+                      <div
+                        className="swiper-button-prev"
+                        onClick={prevReview}
+                      ></div>
+                      {/*   end of add arrows */}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
