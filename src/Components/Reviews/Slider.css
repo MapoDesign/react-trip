@@ -127,14 +127,6 @@
   z-index: 2;
 }
 
-@media screen and (min-width: 992px) {
-  .container {
-    max-width: 600px;
-  }
-  .img {
-    height: 350px;
-  }
-}
 
 .btn-group {
   display: flex;
