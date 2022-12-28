@@ -1,4 +1,5 @@
 import React from "react";
+import starCreator from "../utils/starCreator";
 
 const Review = ({ autore, recensione, voto, classes }) => {
   return (
@@ -9,7 +10,7 @@ const Review = ({ autore, recensione, voto, classes }) => {
         <div className="card-body review">
           <h4>{autore}</h4>
           <p>{recensione}</p>
-          {/*<div className="star-container">{voto}</div>*/}
+          <div className="star-container">{starCreator(voto)}</div>
         </div>
       </div>
     </>

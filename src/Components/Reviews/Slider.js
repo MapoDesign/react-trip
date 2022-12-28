@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Slider.css";
 import data from "../api/data";
 import Review from "./Review";
@@ -28,6 +28,13 @@ const Slider = () => {
       }
     });
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      nextReview();
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, [active]);
 
   return (
     <>
